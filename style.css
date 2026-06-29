@@ -1,239 +1,122 @@
-html{
-    scroll-behavior:smooth;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <!-- Configurações da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#f5f7fa;
-    color:#333;
-}
+    <title>Portfólio | Heitor Henrique</title>
 
-/* MENU */
+    <!-- Arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
 
-nav{
-    background:#222;
-    padding:18px 0;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
+</head>
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
-    gap:40px;
-}
+<body>
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
+    <!-- Menu de navegação -->
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-nav a:hover{
-    color:#4da6ff;
-}
+    <!-- Seção de apresentação -->
+    <section id="sobre">
 
-/* SEÇÕES */
+        <h1>Olá, eu sou <span>Heitor Henrique Moreira</span></h1>
 
-section{
-    padding:70px 10%;
-}
+        <h2>Desenvolvedor em Formação</h2>
 
-h1{
-    font-size:50px;
-    margin-bottom:15px;
-}
+        <p>
+            Tenho 21 anos e moro em Tubarão - SC.
+            Atualmente curso Análise e Desenvolvimento de Sistemas e estou buscando minha primeira oportunidade na área de programação, desenvolvendo minhas habilidades em desenvolvimento web, Python e banco de dados.
+        </p>
 
-h2{
-    font-size:34px;
-    margin-bottom:25px;
-}
+        <p>
+            Nos meus momentos livres gosto de praticar esportes, jogar videogame e ir para a praia.
+        </p>
 
-h3{
-    margin-top:25px;
-    color:#0077ff;
-}
+    </section>
 
-/* SOBRE */
+    <!-- Seção de formação -->
+    <section id="formacao">
 
-#sobre{
+        <h2>Formação</h2>
 
-    text-align:center;
+        <h3>Ensino Superior</h3>
+        <p>
+            Cursando Análise e Desenvolvimento de Sistemas.
+        </p>
 
-}
+        <h3>Cursos</h3>
+        <p>
+            Estudando HTML, CSS, JavaScript e Python.
+        </p>
 
-#sobre span{
+        <h3>Idiomas</h3>
+        <p>
+            Espanhol (básico) e Inglês (básico/intermediário).
+        </p>
 
-    color:#0077ff;
+    </section>
 
-}
+    <!-- Seção com alguns projetos -->
+    <section id="portfolio">
 
-#sobre h2{
+        <h2>Portfólio</h2>
 
-    color:#666;
-    font-size:24px;
-    margin-bottom:30px;
+        <div class="cards">
 
-}
+            <div class="card">
+                <h3>Portfólio Pessoal</h3>
+                <p>Projeto desenvolvido em HTML, CSS e JavaScript para a disciplina de Fundamentos da Programação Web.</p>
+            </div>
 
-#sobre p{
+            <div class="card">
+                <h3>Projetos da Faculdade</h3>
+                <p>Espaço destinado aos projetos e atividades desenvolvidos durante o curso.</p>
+            </div>
 
-    max-width:750px;
-    margin:20px auto;
-    line-height:2;
-    font-size:18px;
+            <div class="card">
+                <h3>GitHub</h3>
+                <p>Em breve, todos os meus projetos estarão disponíveis no meu GitHub.</p>
+            </div>
 
-}
+        </div>
 
-/* FORMAÇÃO */
+    </section>
 
-#formacao{
+    <!-- Formulário de contato -->
+    <section id="contato">
 
-    background:white;
-    border-radius:15px;
-    margin:40px auto;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+        <h2>Contato</h2>
 
-}
+        <p>Preencha o formulário abaixo para entrar em contato comigo.</p>
 
-#formacao p{
+        <form id="formContato">
 
-    line-height:1.8;
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
 
-}
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
 
-/* PORTFÓLIO */
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
 
-#portfolio{
+            <button type="submit">Enviar</button>
 
-    text-align:center;
+        </form>
 
-}
+    </section>
 
-.cards{
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
 
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-    margin-top:35px;
-
-}
-
-.card{
-
-    width:320px;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-    transition:.3s;
-
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
-
-}
-
-.card h3{
-
-    margin-bottom:15px;
-
-}
-
-.card p{
-
-    line-height:1.7;
-
-}
-
-/* CONTATO */
-
-#contato{
-
-    text-align:center;
-
-}
-
-#contato p{
-
-    margin-bottom:30px;
-
-}
-
-form{
-
-    max-width:650px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    display:flex;
-    flex-direction:column;
-
-}
-
-label{
-
-    margin-bottom:8px;
-    font-weight:bold;
-    text-align:left;
-
-}
-
-input,
-textarea{
-
-    width:100%;
-    padding:14px;
-    margin-bottom:20px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:16px;
-    transition:.3s;
-
-}
-
-input:focus,
-textarea:focus{
-
-    outline:none;
-    border-color:#0077ff;
-    box-shadow:0 0 10px rgba(0,119,255,.2);
-
-}
-
-button{
-
-    padding:15px;
-    border:none;
-    border-radius:8px;
-    background:#0077ff;
-    color:white;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-
-}
-
-button:hover{
-
-    background:#005fcc;
-    transform:scale(1.03);
-
-}
+</body>
+</html>
