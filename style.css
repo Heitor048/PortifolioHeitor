@@ -1,122 +1,203 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+/* Configurações gerais da página */
 
-    <!-- Configurações da página -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+html{
+    scroll-behavior:smooth;
+}
 
-    <title>Portfólio | Heitor Henrique</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <!-- Arquivo de estilos -->
-    <link rel="stylesheet" href="style.css">
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
 
-</head>
+/* Menu de navegação */
 
-<body>
+nav{
+    background:#222;
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
 
-    <!-- Menu de navegação -->
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#formacao">Formação</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:40px;
+}
 
-    <!-- Seção de apresentação -->
-    <section id="sobre">
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
 
-        <h1>Olá, eu sou <span>Heitor Henrique Moreira</span></h1>
+nav a:hover{
+    color:#4da6ff;
+}
 
-        <h2>Desenvolvedor em Formação</h2>
+/* Configuração padrão das seções */
 
-        <p>
-            Tenho 21 anos e moro em Tubarão - SC.
-            Atualmente curso Análise e Desenvolvimento de Sistemas e estou buscando minha primeira oportunidade na área de programação, desenvolvendo minhas habilidades em desenvolvimento web, Python e banco de dados.
-        </p>
+section{
+    padding:70px 10%;
+}
 
-        <p>
-            Nos meus momentos livres gosto de praticar esportes, jogar videogame e ir para a praia.
-        </p>
+h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
 
-    </section>
+h2{
+    font-size:34px;
+    margin-bottom:25px;
+}
 
-    <!-- Seção de formação -->
-    <section id="formacao">
+h3{
+    margin-top:25px;
+    color:#0077ff;
+}
 
-        <h2>Formação</h2>
+/* Estilização da seção Sobre */
 
-        <h3>Ensino Superior</h3>
-        <p>
-            Cursando Análise e Desenvolvimento de Sistemas.
-        </p>
+#sobre{
+    text-align:center;
+}
 
-        <h3>Cursos</h3>
-        <p>
-            Estudando HTML, CSS, JavaScript e Python.
-        </p>
+#sobre span{
+    color:#0077ff;
+}
 
-        <h3>Idiomas</h3>
-        <p>
-            Espanhol (básico) e Inglês (básico/intermediário).
-        </p>
+#sobre h2{
+    color:#666;
+    font-size:24px;
+    margin-bottom:30px;
+}
 
-    </section>
+#sobre p{
+    max-width:750px;
+    margin:20px auto;
+    line-height:2;
+    font-size:18px;
+}
 
-    <!-- Seção com alguns projetos -->
-    <section id="portfolio">
+/* Estilização da seção Formação */
 
-        <h2>Portfólio</h2>
+#formacao{
+    background:white;
+    border-radius:15px;
+    margin:40px auto;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
 
-        <div class="cards">
+#formacao p{
+    line-height:1.8;
+}
 
-            <div class="card">
-                <h3>Portfólio Pessoal</h3>
-                <p>Projeto desenvolvido em HTML, CSS e JavaScript para a disciplina de Fundamentos da Programação Web.</p>
-            </div>
+/* Cards da seção Portfólio */
 
-            <div class="card">
-                <h3>Projetos da Faculdade</h3>
-                <p>Espaço destinado aos projetos e atividades desenvolvidos durante o curso.</p>
-            </div>
+#portfolio{
+    text-align:center;
+}
 
-            <div class="card">
-                <h3>GitHub</h3>
-                <p>Em breve, todos os meus projetos estarão disponíveis no meu GitHub.</p>
-            </div>
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:35px;
+}
 
-        </div>
+.card{
+    width:320px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
 
-    </section>
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
 
-    <!-- Formulário de contato -->
-    <section id="contato">
+.card h3{
+    margin-bottom:15px;
+}
 
-        <h2>Contato</h2>
+.card p{
+    line-height:1.7;
+}
 
-        <p>Preencha o formulário abaixo para entrar em contato comigo.</p>
+/* Formulário da seção Contato */
 
-        <form id="formContato">
+#contato{
+    text-align:center;
+}
 
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+#contato p{
+    margin-bottom:30px;
+}
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail">
+form{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    display:flex;
+    flex-direction:column;
+}
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
+label{
+    margin-bottom:8px;
+    font-weight:bold;
+    text-align:left;
+}
 
-            <button type="submit">Enviar</button>
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+    transition:.3s;
+}
 
-        </form>
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#0077ff;
+    box-shadow:0 0 10px rgba(0,119,255,.2);
+}
 
-    </section>
+/* Botão de envio do formulário */
 
-    <!-- Arquivo JavaScript -->
-    <script src="script.js"></script>
+button{
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#0077ff;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
 
-</body>
-</html>
+button:hover{
+    background:#005fcc;
+    transform:scale(1.03);
+}
