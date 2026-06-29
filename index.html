@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+    <!-- Configurações da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfólio | Heitor Henrique</title>
 
+    <!-- Arquivo de estilos -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- Menu -->
+    <!-- Menu de navegação -->
     <nav>
         <ul>
             <li><a href="#sobre">Sobre Mim</a></li>
@@ -20,99 +25,97 @@
         </ul>
     </nav>
 
-  <!-- Sobre -->
-<!-- Sobre -->
-<section id="sobre">
+    <!-- Seção de apresentação -->
+    <section id="sobre">
 
-    <h1>Olá, eu sou <span>Heitor Henrique Moreira</span></h1>
+        <h1>Olá, eu sou <span>Heitor Henrique Moreira</span></h1>
 
-    <h2>Desenvolvedor em Formação</h2>
+        <h2>Desenvolvedor em Formação</h2>
 
-    <p>
-        Tenho 21 anos e moro em Tubarão - SC.
-        Atualmente curso Análise e Desenvolvimento de Sistemas e estou buscando minha primeira oportunidade na área de programação, desenvolvendo minhas habilidades em desenvolvimento web, Python e banco de dados.
-    </p>
+        <p>
+            Tenho 21 anos e moro em Tubarão - SC.
+            Atualmente curso Análise e Desenvolvimento de Sistemas e estou buscando minha primeira oportunidade na área de programação, desenvolvendo minhas habilidades em desenvolvimento web, Python e banco de dados.
+        </p>
 
-    <p>
-        Nos meus momentos livres gosto de praticar esportes, jogar videogame e ir para a praia.
-    </p>
+        <p>
+            Nos meus momentos livres gosto de praticar esportes, jogar videogame e ir para a praia.
+        </p>
 
-</section>
+    </section>
 
-</section>
+    <!-- Seção de formação -->
+    <section id="formacao">
 
-    <!-- Formação -->
-  <section id="formacao">
+        <h2>Formação</h2>
 
-    <h2>Formação</h2>
+        <h3>Ensino Superior</h3>
+        <p>
+            Cursando Análise e Desenvolvimento de Sistemas.
+        </p>
 
-    <h3>Ensino Superior</h3>
-    <p>
-        Cursando Análise e Desenvolvimento de Sistemas.
-    </p>
+        <h3>Cursos</h3>
+        <p>
+            Estudando HTML, CSS, JavaScript e Python.
+        </p>
 
-    <h3>Cursos</h3>
-    <p>
-        Estudando HTML, CSS, JavaScript e Python.
-    </p>
+        <h3>Idiomas</h3>
+        <p>
+            Espanhol (básico) e Inglês (básico/intermediário).
+        </p>
 
-    <h3>Idiomas</h3>
-    <p>
-        Espanhol (básico) e Inglês (básico/intermediário).
-    </p>
+    </section>
 
-</section>
+    <!-- Seção com alguns projetos -->
+    <section id="portfolio">
 
-    <!-- Portfólio -->
-<section id="portfolio">
+        <h2>Portfólio</h2>
 
-    <h2>Portfólio</h2>
+        <div class="cards">
 
-    <div class="cards">
+            <div class="card">
+                <h3>Portfólio Pessoal</h3>
+                <p>Projeto desenvolvido em HTML, CSS e JavaScript para a disciplina de Fundamentos da Programação Web.</p>
+            </div>
 
-        <div class="card">
-            <h3>Portfólio Pessoal</h3>
-            <p>Projeto desenvolvido em HTML, CSS e JavaScript para a disciplina de Fundamentos da Programação Web.</p>
+            <div class="card">
+                <h3>Projetos da Faculdade</h3>
+                <p>Espaço destinado aos projetos e atividades desenvolvidos durante o curso.</p>
+            </div>
+
+            <div class="card">
+                <h3>GitHub</h3>
+                <p>Em breve, todos os meus projetos estarão disponíveis no meu GitHub.</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>Projetos da Faculdade</h3>
-            <p>Espaço destinado aos projetos e atividades desenvolvidos durante o curso.</p>
-        </div>
+    </section>
 
-        <div class="card">
-            <h3>GitHub</h3>
-            <p>Em breve, todos os meus projetos estarão disponíveis no meu GitHub.</p>
-        </div>
+    <!-- Formulário de contato -->
+    <section id="contato">
 
-    </div>
+        <h2>Contato</h2>
 
-</section>
+        <p>Preencha o formulário abaixo para entrar em contato comigo.</p>
 
-    <!-- Contato -->
- <section id="contato">
+        <form id="formContato">
 
-    <h2>Contato</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
 
-    <p>Preencha o formulário abaixo para entrar em contato comigo.</p>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
 
-    <form id="formContato">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
+            <button type="submit">Enviar</button>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail">
+        </form>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
+    </section>
 
-        <button type="submit">Enviar</button>
-
-    </form>
-
-</section>
-
+    <!-- Arquivo JavaScript -->
     <script src="script.js"></script>
 
 </body>
